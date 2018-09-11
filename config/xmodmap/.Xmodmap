@@ -1,0 +1,42 @@
+!
+! Tilde as Esc, Shift + Tilde as tilde, AlGr + Tilde as Grave
+!
+keycode 49 = Escape asciitilde grave asciitilde grave grave
+
+!
+! RWIN and LCTRL as Mode_switch
+!
+clear mod4
+keysym Super_R = Mode_switch
+keycode 37 = Mode_switch
+add mod4 = Mode_switch
+
+!
+! Mode_switch + Backspace as Delete
+!
+keycode  22 = BackSpace BackSpace Delete BackSpace BackSpace BackSpace
+
+!
+! Mode_switch + 1-9 as F1-F2
+!
+keycode  10 = 1 exclam F1 F1 notequal exclamdown notequal
+keycode  11 = 2 at F2 F2 twosuperior questiondown twosuperior
+keycode  12 = 3 numbersign F3 F3 threesuperior sterling threesuperior
+keycode  13 = 4 dollar F4 F4 cent onequarter cent
+keycode  14 = 5 percent F5 F5 EuroSign U2030 EuroSign
+keycode  15 = 6 asciicircum F6 F6 onehalf logicaland onehalf
+keycode  16 = 7 ampersand F7 F7 section approxeq section
+keycode  17 = 8 asterisk F8 F8 periodcentered threequarters periodcentered
+keycode  18 = 9 parenleft F9 F9 guillemotleft plusminus guillemotleft
+keycode  19 = 0 parenright F10 F10 guillemotright degree guillemotright
+keycode  20 = minus underscore F11 F11 endash emdash endash
+keycode  21 = equal plus F12 F12 dead_cedilla dead_ogonek dead_cedilla
+
+!
+! ModeSwitch + hjkl as Arrows
+!
+keycode  43 = h H Left Left rightsinglequotemark U2022
+keycode  44 = j J Down Down schwa SCHWA
+keycode  45 = k K Up Up ellipsis dead_stroke
+keycode  46 = l L Right Right lstroke Lstroke
+
