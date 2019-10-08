@@ -6,11 +6,22 @@ if [ "$1" = "n" ]; then
 fi
 
 setxkbmap -option ctrl:nocaps
-setxkbmap -option altwin:swap_lalt_lwin
-xmodmap ~/xmodmap/.Xmodmap
+#setxkbmap -option altwin:swap_lalt_lwin
+xmodmap ~/xmodmap/xmodmap
+
+# Use Spacebar as a Modifier
+#spare_modifier="Hyper_L" 
+#xmodmap -e "keycode 65 = $spare_modifier"   
+#xmodmap -e "add Hyper_L = $spare_modifier"
+#xmodmap -e "keycode any = space"  
+#xcape -e "$spare_modifier=space"
+
 sudo chmod +rw -R /dev/input
-PROCESS_NUM=`ps -ef | grep "keyListen.py" | grep -v "grep" | wc -l`
-echo $PROCESS_NUM
-if [ "$PROCESS_NUM" = "0" ]; then
+LAUNCHED=`ps -ef | grep "keyListen.py" | grep -v "grep" | wc -l`
+if [ "$LAUNCHED" = "0" ]; then
+    $HOME/xmodmap/keyListen.py &
+else
+    PROCESS_NUM=`ps -aef | grep -v grep | grep "keyListen.py" | awk '{{print $2}}'`
+    kill -9 $PROCESS_NUM
     $HOME/xmodmap/keyListen.py &
 fi

@@ -1,0 +1,13 @@
+keycode  43 = h H Left Left rightsinglequotemark U2022
+keycode  44 = j J Down Down schwa SCHWA
+keycode  45 = k K Up Up ellipsis dead_stroke
+keycode  46 = l L Right Right lstroke Lstroke
+
+keycode  25 = w W Up Up oe OE oe OE w W oe OE
+keycode  38 = a A Left Left aogonek Aogonek aogonek Aogonek a A aogonek Aogonek
+keycode  39 = s S Down Down sacute Sacute sacute Sacute s S sacute Sacute
+keycode  40 = d D Right Right eth ETH eth ETH d D eth ETH
+
+keycode 66 = Control_L Control_L BackSpace Control_L Control_L Control_L
+
+keycode  16 = 7 ampersand F7 F7 section approxeq section

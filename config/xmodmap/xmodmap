@@ -4,13 +4,19 @@
 keycode 49 = Escape asciitilde grave asciitilde grave grave
 
 !
-! RWIN and LCTRL as Mode_switch
+! RWIN and LWIN as Mode_switch
 !
 clear mod4
 keysym Super_R = Mode_switch
 keycode 134 = Mode_switch
 keycode 37 = Mode_switch
 add mod4 = Mode_switch
+
+!
+! SPACE as modifier
+!
+!clear mod3 
+! add mod3 = Hyper_L 
 
 !
 ! Mode_switch + Backspace as Delete
@@ -45,3 +51,6 @@ keycode  25 = w W Up Up oe OE oe OE w W oe OE
 keycode  38 = a A Left Left aogonek Aogonek aogonek Aogonek a A aogonek Aogonek
 keycode  39 = s S Down Down sacute Sacute sacute Sacute s S sacute Sacute
 keycode  40 = d D Right Right eth ETH eth ETH d D eth ETH
+
+keycode 66 = Control_L Control_L BackSpace Control_L Control_L Control_L
+keycode 65 = space space Return space space space

@@ -8,6 +8,7 @@ set showmode
 set relativenumber
 set number
 set incsearch
+set smartcase
 
 map \b :action Build<CR>
 
@@ -23,3 +24,7 @@ let s:restore_reg = @"
  return "p@=RestoreRegister()\<cr>"
 endfunction
 vmap <silent> <expr> p <sid>Repl()
+
+command Build !pysilo --project mmp-cp7584a1-cubitv
+
+inoremap jj <Esc>
