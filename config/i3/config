@@ -102,8 +102,14 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9 "
+set $ws9 "9"
 set $ws10 "10 "
+
+workspace $ws1 output DP-1
+workspace $ws2 output DP-2
+workspace $ws3 output DP-2
+workspace $ws9 output DP-3
+workspace $ws10 output DP-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -116,6 +122,16 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+Control+1 workspace 11
+bindsym $mod+Control+2 workspace 12
+bindsym $mod+Control+3 workspace 13
+bindsym $mod+Control+4 workspace 14
+bindsym $mod+Control+5 workspace 15
+bindsym $mod+Control+6 workspace 16
+bindsym $mod+Control+7 workspace 17
+bindsym $mod+Control+8 workspace 18
+bindsym $mod+Control+9 workspace 19
+bindsym $mod+Control+0 workspace 20
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -186,6 +202,7 @@ bar {
   }
 
   status_command i3status
+  tray_output primary
 }
 
 bindsym Mod1+Tab exec rofi-switch
@@ -197,10 +214,11 @@ bindsym $mod+Shift+p exec "i3-msg 'floating toggle; sticky toggle; resize shrink
 
 assign [class="jetbrains-clion"] $ws2
 assign [class="jetbrains-pycharm-ce"] $ws3
-assign [class="spotify"] $ws9
-assign [class="Spotify"] $ws9
 assign [class="Firefox"] $ws10
 assign [class="ea.exe"] $ws5
+assign [title="QBPlatformHAL-xrender"] $ws9
+for_window [title="QBPlatformHAL-xrender"] fullscreen enable
+for_window [title="/home/akepka/branches/*"] border normal
 
 exec --no-startup-id keynav daemonize
 #exec --no-startup-id xrandr --output DP-1 --right-of DP-2
@@ -218,12 +236,14 @@ for_window [class="(?i)gsimplecal"] floating enable, move position mouse
 for_window [class="vlc"] sticky enable, floating enable
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle # mute sound
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+for_window [urgent="latest"] focus

@@ -5,9 +5,11 @@ if [ "$1" = "n" ]; then
     exit
 fi
 
+xinput set-prop 14 305 1.0
 setxkbmap -option ctrl:nocaps
 #setxkbmap -option altwin:swap_lalt_lwin
 xmodmap ~/xmodmap/xmodmap
+xcape -e 'Control_L=BackSpace'
 
 # Use Spacebar as a Modifier
 #spare_modifier="Hyper_L" 
