@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>org.sil.ukelele.keyboardlayout.colemak_pl</string>
+	<key>CFBundleName</key>
+	<string>colemak_pl</string>
+	<key>CFBundleVersion</key>
+	<string></string>
+	<key>KLInfo_Colemak</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.colemak_pl.colemak</string>
+		<key>TISIntendedLanguage</key>
+		<string>pl</string>
+	</dict>
+	<key>KLInfo_Colemak Mod-DH</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.colemak_pl.colemakmod-dh</string>
+		<key>TISIntendedLanguage</key>
+		<string>pl</string>
+	</dict>
+	<key>KLInfo_Colemak Wide</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.colemak_pl.colemakwide</string>
+		<key>TISIntendedLanguage</key>
+		<string>pl</string>
+	</dict>
+	<key>KLInfo_Polish - ProR Wide</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.colemak_pl.polish-prorwide</string>
+		<key>TISIntendedLanguage</key>
+		<string>pl</string>
+	</dict>
+</dict>
+</plist>
